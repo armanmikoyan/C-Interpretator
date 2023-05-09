@@ -37,7 +37,7 @@ struct Number {
 };
 struct String {
     char name[50];
-    char value[100];
+    char value[150];
 };
 
 
@@ -62,8 +62,15 @@ int string_length = 0;
 
 
 	for(int i = 0; i<num_words;i++){		
-              
+              if(strcmp(words[i], "int") == 0) {
+                strcpy(number[i].name, words[i+1]);
+                number[i].value =  atoi(words[i+2]);
+ 	            printf("%s\n",number[i].name);
+                 printf("%d\n",number[i].value);
+            
 
+
+	}
 	}
 
      
