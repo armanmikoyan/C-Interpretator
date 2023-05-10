@@ -7,35 +7,35 @@
 
 int main()
 {
-	char words[MAX_NUM_WORDS][MAX_WORD_LEN]; // массив строк
-	int num_words = 0;						 // количество слов
+	char words[MAX_NUM_WORDS][MAX_WORD_LEN]; 
+	int num_words = 0;						 
 	char filename[50];
 	printf("Enter file name  ");
 	scanf("%s", filename);
 
-	// Открыть файл для чтения
+
 	FILE *fp = fopen(filename, "r");
 	if (fp == NULL)
 	{
-		printf("Ошибка при открытии файла\n");
+		printf("file doesnt exists\n");
 		exit(1);
 	}
 
-	// Читать файл по словам
+	
 	while (fscanf(fp, "%s", words[num_words]) == 1)
 	{
 		num_words++;
 		if (num_words == MAX_NUM_WORDS)
 		{
-			printf("Достигнуто максимальное количество слов (%d)\n", MAX_NUM_WORDS);
+			printf("owerflow (%d)\n", MAX_NUM_WORDS);
 			break;
 		}
 	}
 
-	// Закрыть файл
+
 	fclose(fp);
 
-	// data
+
 	struct Number
 	{
 		char name[50];
@@ -73,13 +73,13 @@ int main()
 		{
 			strcpy(number[i].name, words[i + 1]);
 			number[i].value = atoi(words[i + 2]);
-			//	printf("%s %d\n", number[i].name, number[i].value);
+			
 		}
 		else if (strcmp(words[i], "str") == 0)
 		{
 			strcpy(string[i].name, words[i + 1]);
 			strcpy(string[i].value, words[i + 2]);
-			//	printf("%s %s\n", string[i].name, string[i].value);
+			
 		}
 	}
 
