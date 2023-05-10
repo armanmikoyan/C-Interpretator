@@ -110,19 +110,19 @@ int main()
 			printf("%d\n", result);
 			result = 0;
 		}
-		if (strcmp(words[i], "log") == 0 && strcmp(words[i + 2], "-") == 0)
+		else if (strcmp(words[i], "log") == 0 && strcmp(words[i + 2], "-") == 0)
 		{
 			result = num_operand1 - num_operand2;
 			printf("%d\n", result);
 			result = 0;
 		}
-		if (strcmp(words[i], "log") == 0 && strcmp(words[i + 2], "*") == 0)
+		else if (strcmp(words[i], "log") == 0 && strcmp(words[i + 2], "*") == 0)
 		{
 			result = num_operand1 * num_operand2;
 			printf("%d\n", result);
 			result = 0;
 		}
-		if (strcmp(words[i], "log") == 0 && strcmp(words[i + 2], "/") == 0)
+		else if (strcmp(words[i], "log") == 0 && strcmp(words[i + 2], "/") == 0)
 		{
 			result = num_operand1 / num_operand2;
 			printf("%d\n", result);
