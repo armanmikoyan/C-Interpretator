@@ -1,5 +1,7 @@
-int num1 123
-int num2 11
+int num1 7
+int num2 2
 str str1 word
 int num3 21
 str str2 hello
+log num1 - num2
+
